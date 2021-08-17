@@ -1,3 +1,2 @@
-# Per-Scholas-TypeScript
-
+# Per-Scholas-React-Week1JavaScript
 
