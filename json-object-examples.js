@@ -43,3 +43,10 @@ console.log(myDetails);
 
 console.log("My Info printed as String in the JSON format");
 console.log(JSON.stringify(myDetails));
+
+function sayHi(name, age){
+    //return "my name is : " + name;
+    return `my name is  ${name} and I am ${age} years old`;
+}
+
+console.log(sayHi("Priti", 35));
