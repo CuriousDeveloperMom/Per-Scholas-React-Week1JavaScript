@@ -33,7 +33,7 @@ function greeting(name, gender, isSelf) {
     // do stuff here ...
 
     if(isSelf)
-       return  `${greetingWords[1].charAt(0).toUpperCase()} ${greetingWords[]}, ${prefixes[0]} name is ${name}`; // use template literal for string to return
+       return  `${greetingWords[1]}, ${prefixes[0]} name is ${name}`; // use template literal for string to return
     else if(gender === "nonbinary")
        return  `${greetingWords[2]}, ${prefixes[3]} name is ${name}`; 
     else if (gender === "female")   
