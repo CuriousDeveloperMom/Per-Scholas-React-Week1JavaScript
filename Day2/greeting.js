@@ -26,44 +26,43 @@ const prefixes = ["my", "his", "her", "their"];
 
 */
 
-
+function capitalize(str){
+       return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
 function greeting(name, gender, isSelf) {
 
     // do stuff here ...
+    // use template literal for string to return
 
-    if(isSelf)
-       return  `${greetingWords[1]}, ${prefixes[0]} name is ${name}`; // use template literal for string to return
-    else if(gender === "nonbinary")
-       return  `${greetingWords[2]}, ${prefixes[3]} name is ${name}`; 
-    else if (gender === "female")   
-       return  `${greetingWords[0]}, ${prefixes[2]} name is ${name}`; 
-    else if (gender === "male")   
-       return  `${greetingWords[0]}, ${prefixes[1]} name is ${name}`; 
+    let greeting = '';
+    let prefix = '';
+    
+    if(isSelf){
+       greeting = capitalize(greetingWords[1]);
+       prefix = prefixes[0];
+    }  
+    else if(gender === "nonbinary"){
+       greeting = capitalize(greetingWords[2]);
+       prefix = prefixes[3];
+    } else if (gender === "female"){
+       greeting = capitalize(greetingWords[0]);
+       prefix = prefixes[2];
+    } else if (gender === "male"){
+       greeting = capitalize(greetingWords[0]);
+       prefix = prefixes[1];
+    }
+       return  `${greeting}, ${prefix} name is ${capitalize(name)}`; 
   }
 
-//   function capitalizeFLetter(greetingWords) {
-
-       
-//        // code below is same as: const upperCaseFirstLetter = word.charAt(0).toUpperCase();
-//        let firstLetUpperCase = word.charAt(0).toUpperCase();
-//        const restWord = word.slice(1);
-     
-//         //return firstLetUpperCase + restWord;
-     
-     
-//        // The line of code below does the same as all the code above
-//        return word.charAt(0).toUpperCase() + word.slice(1);
-//      }
-
-  const message = greeting("Priti", "female", true);
+  const message = greeting("priti", "female", true);
   console.log(message);
 
-  const message1 = greeting("Xyz", "nonbinary", false);
+  const message1 = greeting("xyz", "nonbinary", false);
   console.log(message1);
 
-  const message2 = greeting("Abc", "female", false);
+  const message2 = greeting("abc", "female", false);
   console.log(message2);
 
-  const message3 = greeting("Zzz", "male", false);
+  const message3 = greeting("zzz", "male", false);
   console.log(message3);
