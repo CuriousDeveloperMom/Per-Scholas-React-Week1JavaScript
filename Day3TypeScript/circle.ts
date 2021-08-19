@@ -12,15 +12,15 @@
 const pi = 3.14159;
 let radius = 2.7;
 
- function getArea(radius){
+ function getArea(radius: number): number{
 ​   return (pi * (radius * radius));
  }
 ​
- function getDiameter(radius) {
+ function getDiameter(radius: number): number {
 ​   return (radius * 2);
  }
 ​
- function getCircumfrence(radius) {
+ function getCircumfrence(radius: number): number {
 ​   return pi * diameter;
 ​}
 
