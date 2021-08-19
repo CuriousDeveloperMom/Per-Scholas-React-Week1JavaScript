@@ -67,6 +67,14 @@ function drawSnack(){
         ctx.fillStyle = `rgb(${red},${green},${blue})`;
         ctx.fillRect(x, y, size, size);
         x+=size;
+
+        let random = Math.random();
+
+        if (random < 0.5)
+            y-=size;
+        else
+            y+=size;   
+        
         
     }
     
