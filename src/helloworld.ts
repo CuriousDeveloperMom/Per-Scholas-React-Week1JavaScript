@@ -3,6 +3,7 @@
 let myName = "Priti";
 console.log(myName);
 
+console.log("Yavuz")
 // <HTMLCanvasElement>
 // var canvas = <HTMLCanvasElement> document.getElementById("canvas");
 
